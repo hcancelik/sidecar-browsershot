@@ -46,7 +46,7 @@ jobs:
           echo "
           providers:
             - Hammerstone\Sidecar\Providers\SidecarServiceProvider
-            - Wnx\SidecarBrowsershot\SidecarBrowsershotServiceProvider" >> testbench.yaml
+            - Hcancelik\SidecarBrowsershot\SidecarBrowsershotServiceProvider" >> testbench.yaml
 
         # Deploy Lambda function before running the test suite.
       - name: Deploy Lambda function

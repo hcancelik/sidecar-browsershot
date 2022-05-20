@@ -1,6 +1,6 @@
 <?php
 
-namespace Wnx\SidecarBrowsershot\Functions;
+namespace Hcancelik\SidecarBrowsershot\Functions;
 
 use Hammerstone\Sidecar\LambdaFunction;
 use Hammerstone\Sidecar\Package;

@@ -1,12 +1,12 @@
 <?php
 
-namespace Wnx\SidecarBrowsershot\Tests;
+namespace Hcancelik\SidecarBrowsershot\Tests;
 
 use Hammerstone\Sidecar\Providers\SidecarServiceProvider;
 use Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Wnx\SidecarBrowsershot\Functions\BrowsershotFunction;
-use Wnx\SidecarBrowsershot\SidecarBrowsershotServiceProvider;
+use Hcancelik\SidecarBrowsershot\Functions\BrowsershotFunction;
+use Hcancelik\SidecarBrowsershot\SidecarBrowsershotServiceProvider;
 
 class TestCase extends Orchestra
 {

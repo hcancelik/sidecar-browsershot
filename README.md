@@ -1,9 +1,9 @@
 # Run Browsershot on AWS Lambda with Sidecar for Laravel
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/wnx/sidecar-browsershot.svg?style=flat-square)](https://packagist.org/packages/wnx/sidecar-browsershot)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/hcancelik/sidecar-browsershot.svg?style=flat-square)](https://packagist.org/packages/hcancelik/sidecar-browsershot)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/stefanzweifel/sidecar-browsershot/run-tests?label=tests)](https://github.com/stefanzweifel/sidecar-browsershot/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/stefanzweifel/sidecar-browsershot/Check%20&%20fix%20styling?label=code%20style)](https://github.com/stefanzweifel/sidecar-browsershot/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/wnx/sidecar-browsershot.svg?style=flat-square)](https://packagist.org/packages/wnx/sidecar-browsershot)
+[![Total Downloads](https://img.shields.io/packagist/dt/hcancelik/sidecar-browsershot.svg?style=flat-square)](https://packagist.org/packages/hcancelik/sidecar-browsershot)
 
 This package allows you to run [Browsershot](https://github.com/spatie/browsershot) on [AWS Lambda](https://aws.amazon.com/lambda/) through [Sidecar](https://github.com/hammerstonedev/sidecar).
 
@@ -20,7 +20,7 @@ Follow their installation and configuration instructions. (You can skip the inst
 You can install the package via composer:
 
 ```bash
-composer require wnx/sidecar-browsershot
+composer require hcancelik/sidecar-browsershot
 ```
 
 Register the `BrowsershotFunction::class` in your `sidecar.php` config file.
@@ -30,7 +30,7 @@ Register the `BrowsershotFunction::class` in your `sidecar.php` config file.
  * All of your function classes that you'd like to deploy go here.
  */
 'functions' => [
-    \Wnx\SidecarBrowsershot\Functions\BrowsershotFunction::class,
+    \Hcancelik\SidecarBrowsershot\Functions\BrowsershotFunction::class,
 ],
 ```
 
@@ -48,7 +48,7 @@ You can use `BrowsershotLambda` like the default `Browsershot`-class coming from
 All you need to do is replace `Browsershot` with `BrowsershotLambda`.
 
 ```php
-use Wnx\SidecarBrowsershot\BrowsershotLambda;
+use Hcancelik\SidecarBrowsershot\BrowsershotLambda;
 
 // an image will be saved
 BrowsershotLambda::url('https://example.com')->save($pathToImage);
@@ -74,7 +74,7 @@ You can store your file directly on AWS S3.
 After the above settings, you can use `saveToS3` method on `BrowsershotLambda`.
 
 ```php
-use Wnx\SidecarBrowsershot\BrowsershotLambda;
+use Hcancelik\SidecarBrowsershot\BrowsershotLambda;
 // an image will be saved on S3
 BrowsershotLambda::url('https://example.com')->saveToS3('example.jpg');
 // a pdf will be saved on S3

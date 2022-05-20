@@ -1,10 +1,10 @@
 <?php
 
-namespace Wnx\SidecarBrowsershot;
+namespace Hcancelik\SidecarBrowsershot;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Wnx\SidecarBrowsershot\Commands\InternalBrowsershotSetupCommand;
+use Hcancelik\SidecarBrowsershot\Commands\InternalBrowsershotSetupCommand;
 
 class SidecarBrowsershotServiceProvider extends PackageServiceProvider
 {

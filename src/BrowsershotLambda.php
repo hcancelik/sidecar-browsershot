@@ -1,6 +1,6 @@
 <?php
 
-namespace Wnx\SidecarBrowsershot;
+namespace Hcancelik\SidecarBrowsershot;
 
 use Hammerstone\Sidecar\Results\SettledResult;
 use Illuminate\Support\Arr;
@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 use Spatie\Browsershot\Browsershot;
 use Spatie\Browsershot\Exceptions\CouldNotTakeBrowsershot;
 use Spatie\Browsershot\Exceptions\ElementNotFound;
-use Wnx\SidecarBrowsershot\Functions\BrowsershotFunction;
+use Hcancelik\SidecarBrowsershot\Functions\BrowsershotFunction;
 
 class BrowsershotLambda extends Browsershot
 {

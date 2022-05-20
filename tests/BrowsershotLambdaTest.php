@@ -1,7 +1,7 @@
 <?php
 
 use Hammerstone\Sidecar\Exceptions\LambdaExecutionException;
-use Wnx\SidecarBrowsershot\BrowsershotLambda;
+use Hcancelik\SidecarBrowsershot\BrowsershotLambda;
 
 beforeEach(function () {
     if (file_exists('example.pdf')) {
