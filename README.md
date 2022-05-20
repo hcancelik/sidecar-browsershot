@@ -64,6 +64,25 @@ $html = BrowsershotLambda::url('https://example.com')->bodyHtml();
 Storage::disk('s3')->put('example.html', $html);
 ```
 
+## Saving directly to S3
+
+You can store your file directly on AWS S3.
+
+- You must add an `s3_bucket` and `s3_region` keys added to config/sidecar.php
+- You must give S3 write permissions to your sidecar-execution-role
+
+After the above settings, you can use `saveToS3` method on `BrowsershotLambda`.
+
+```php
+use Wnx\SidecarBrowsershot\BrowsershotLambda;
+// an image will be saved on S3
+BrowsershotLambda::url('https://example.com')->saveToS3('example.jpg');
+// a pdf will be saved on S3
+BrowsershotLambda::url('https://example.com')->saveToS3('example.pdf');
+// save your own html to a PDF on S3
+BrowsershotLambda::html('<h1>Hello world!!</h1>')->saveToS3('example.pdf');
+```
+
 ## Testing
 
 The testsuite makes connections to AWS and runs the deployed Lambda function. In order to run the testsuite, you will need an active [AWS account](https://aws.amazon.com/).
